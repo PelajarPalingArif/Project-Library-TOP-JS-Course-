@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <dialog class="modal" id="addBookModal">
+            <div class="modal-title">Add Book <button id="closeButton">Close</button></div>
+            <form action="#">
+                <div class="modal-content">
+                    <div class="input-wrap">
+                        <label for="titleInput">Title</label>
+                        <input type="text" id="titleInput" name="titleInput">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="descInput">Description</label>
+                        <textarea name="descInput" id="descInput"></textarea>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="isbnInput">ISBN</label>
+                        <input type="text" id="isbnInput" name="isbnInput">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="authorInput">Author</label>
+                        <input type="text" id="authorInput" name="authorInput">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="yearInput">Year</label>
+                        <input type="text" id="yearInput" name="yearInput">
+                    </div>
+                    <div class="submit-wrap">
+                        <input type="submit" id="submitButton">
+                    </div>
+            </form>
+        </dialog>
+    
+
+    </div>
+    <div class="navbar" id="openModalButton"><span style="cursor:pointer;">Arif</span></div>
+    <div class="library">
+        <div class="container">
+            <!-- Example Of a Book -->
+
+            <!-- <div class="book-card">
+
+                <div class="title"></div>
+                <div class="description"></div>
+                <div class="isbn"></div>
+                <div class="author"></div>
+                <div class="year"></div>
+            </div> -->
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

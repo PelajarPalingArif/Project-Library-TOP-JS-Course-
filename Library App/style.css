@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url("Rubik-Regular.ttf");
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overscroll-behavior: none;
+    
+}
+
+body > * {
+    border:1px solid black;
+}
+
+.navbar {
+    height:70px;
+    display: flex;
+    align-items: center;
+    padding:0px 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: xx-large;
+    font-family: 'Rubik';
+}
+
+.library {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0px 5%;
+}
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    gap: 20px;
+    padding: 10px 10px;
+}
+
+.book-card {
+    font-family: 'Rubik';
+    color: white;
+    background-color: blue;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    box-shadow: 10px 4px 0px rgba(0, 123, 255, 0.2);
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 10px 4px 0px rgba(0, 123, 255, 0.8);
+}
+
+.read {
+    background-color: rgb(81, 21, 109);
+    box-shadow: 10px 4px 0px rgba(65, 1, 90, 0.2);
+}
+.read:hover {
+    box-shadow: 10px 4px 0px rgba(81, 21, 109,0.8);
+}
+
+.book-card > .title {
+    font-weight: bolder;
+    font-size: x-large;
+
+}
+.book-card > .description {
+    flex: 1;
+    overflow: hidden;
+    word-break:break-all;
+    text-overflow: ellipsis;
+}
+.book-card > .isbn {
+    font-style: italic;
+
+}
+.book-card > .author-year, .book-card > .author-year > .year {
+    display: flex;
+}
+.book-card > .author-year > .author {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.modal {
+    border: 2px solid white;
+    background-color: rgb(161, 159, 159);
+    width: 30%;
+    border-radius: 20px;
+    font-family: 'Rubik';
+    overflow: hidden;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.modal[open]{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    position: absolute;
+    top: 20px;
+}
+.modal-title {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: x-large;
+    
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-wrap {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    gap: 20px;
+    font-weight: bold;
+}
+.input-wrap > textarea,.input-wrap > input {
+    width: 60%;
+    resize: none;
+    font-family: 'Rubik';
+}
+
+.submit-wrap {
+    display: flex;
+    justify-content: end;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+button {
+    border:none;
+    background-color: grey;
+    font-family: 'Rubik';
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+button:hover {
+    outline:1px solid black;
+    background-color: rgb(73, 73, 73);
+    
+}
+
+.control-button {
+    display: flex;
+    gap: 20px;
+}
